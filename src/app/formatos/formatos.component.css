@@ -1,0 +1,96 @@
+/* Estilo para la tarjeta del visor de PDF */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+  /* Verde oscuro para títulos */
+h2, h4, .card-header {
+    color: #1b5e20 !important;
+  }
+  
+  /* Texto negro para párrafos */
+  p, .card-body, .list-group-item span {
+    color: #000000;
+  }
+  
+  
+  .card-header {
+    background-color: #70677c;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .card ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .card ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .card ul li button {
+    margin-left: 10px;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  /* NUEVO: Títulos principales */
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c3b6d3;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  /* NUEVO: Grid limpio para PDFs */
+  .pdf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* NUEVO: Estilo para botón de descarga */
+  .download-btn {
+    background-color: transparent;
+    border: 1px solid #602ba4;
+    color: #602ba4;
+    border-radius: 4px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .download-btn:hover {
+    background-color: #602ba4;
+    color: white;
+  }
+  

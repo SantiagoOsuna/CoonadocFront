@@ -1,0 +1,90 @@
+<div class="container mt-4">
+    <section class="text-center mb-5">
+        <h1 class="display-4">Bienvenidos a COONADOC</h1>
+        <p class="lead">Una cooperativa comprometida con el bienestar de sus afiliados.</p>
+    </section>
+
+    <section id="carousel-home" class="mb-5 position-relative">
+        <div id="homeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+      
+            <div class="carousel-item active">
+              <img src="assets/slider1.jpg" class="d-block w-100" alt="Slide 1">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5>Programa de Crédito Social</h5>
+                <p>Accede a créditos con tasas preferenciales para nuestros afiliados.</p>
+                <a href="#" class="btn btn-success">Ver más</a>
+              </div>
+            </div>
+      
+            <div class="carousel-item">
+              <img src="assets/slider2.jpg" class="d-block w-100" alt="Slide 2">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5>Convenios Especiales</h5>
+                <p>Descubre todos los aliados que tenemos para ti.</p>
+                <a href="#" class="btn btn-success">Explorar convenios</a>
+              </div>
+            </div>
+      
+            <div class="carousel-item">
+              <img src="assets/slider3.jpg" class="d-block w-100" alt="Slide 3">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5>Eventos y Actividades</h5>
+                <p>Mantente al tanto de nuestras actividades comunitarias.</p>
+                <a href="#" class="btn btn-success">Ver eventos</a>
+              </div>
+            </div>
+      
+          </div>
+      
+          <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </section>      
+
+      <section class="row mb-4 border border-dark border-3 p-4">
+        <div class="col-md-6">
+            <h2>¿Quiénes Somos?</h2>
+            <p>Somos una cooperativa de aportes y crédito que entrega servicios integrales generando rentabilidad para fortalecer el patrimonio y brindar bienestar a través de sus excedentes.</p>
+            <h3>Beneficios de ser afiliado</h3>
+            <ul>
+                <li><strong>Créditos con tasas preferenciales:</strong> Ofrecemos opciones de crédito con condiciones especiales.</li>
+                <li><strong>Convenios con aliados:</strong> Accede a acuerdos exclusivos con instituciones y empresas.</li>
+                <li><strong>Acceso a seguros y apoyo social:</strong> Brindamos apoyo en seguros de salud, vida y otros servicios.</li>
+                <li><strong>Eventos y actividades comunitarias:</strong> Organizamos eventos que fomentan el espíritu de comunidad y colaboración.</li>
+            </ul>
+        </div>
+        
+        <div class="col-md-6">
+            <img src="assets/imagencoonadoc.jpg" class="img-fluid" alt="Imagen COONADOC">
+        </div>
+    </section>        
+    
+
+    <section class="mb-5 text-center">
+        <h3 class="mb-3">ÚLTIMAS NOTICIAS</h3>
+        <div class="d-flex justify-content-center align-items-center">
+          <button class="btn btn-outline-dark me-2" (click)="prev()" [disabled]="visibleStartIndex === 0">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+      
+          <div class="d-flex" style="gap: 1rem;">
+            <div class="card text-center" style="width: 150px;" *ngFor="let noticia of visibleNoticias">
+              <img [src]="noticia.imagen" class="card-img-top" alt="Noticia" style="height: 100px; object-fit: cover;">
+              <div class="card-body p-2">
+                <p class="card-text small">{{ noticia.descripcion }}</p>
+              </div>
+            </div>
+          </div>
+      
+          <button class="btn btn-outline-dark ms-2" (click)="next()" 
+            [disabled]="visibleStartIndex + visibleCount >= noticias.length">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </section>      
+</div>
