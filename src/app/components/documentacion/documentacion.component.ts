@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
-import { CommonModule } from '@angular/common'; // siempre útil
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-documentacion',
