@@ -10,15 +10,6 @@ import { CommonModule } from '@angular/common'; // siempre útil
   styleUrls: ['./formatos.component.css']
 })
 export class FormatosComponent {
-  pdfs = [
-    { title: 'Formato de Autorización', src: 'assets/pdf1.pdf' },
-    { title: 'Formato de Inscripción', src: 'assets/pdf2.pdf' },
-    { title: 'Formato de Solicitud', src: 'assets/pdf3.pdf' },
-    { title: 'Formato de Retiro', src: 'assets/pdf4.pdf' },
-    { title: 'Formato de Certificación', src: 'assets/pdf5.pdf' },
-  ];
-  
-
   // Lista de documentos normativos con opción de descarga
   documentos = [
     { nombre: 'Documento Normativo 1', url: 'assets/docs/documento1.pdf' },
