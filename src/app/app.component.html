@@ -1,33 +1,27 @@
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4">
   <a class="navbar-brand d-flex align-items-center" routerLink="/">
     <img src="assets/logo.png" alt="Logo COONADOC" class="logo">
   </a>
 
-  <!-- Botón para abrir el menú en dispositivos móviles -->
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" (click)="toggleMenu()" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!-- Menú de navegación colapsable -->
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <div class="navbar-nav">
-      <a class="nav-link" [routerLink]="['/formatos']" routerLinkActive="active">Quiénes Somos</a>
-      <a class="nav-link" [routerLink]="['/servicios']" routerLinkActive="active">Afiliación y Servicios</a>
-      <a class="nav-link" [routerLink]="['/contactos']" routerLinkActive="active">Contacto y Soporte</a>
-      <a class="nav-link" [routerLink]="['/documentacion']" routerLinkActive="active">Documentación y Formatos</a>
+  <div class="collapse navbar-collapse justify-content-end" [class.show]="isMenuOpen" id="navbarNav">
+    <div class="navbar-nav bg-black rounded p-3">
+      <a class="nav-link custom-link" [routerLink]="['/formatos']" routerLinkActive="active" (click)="closeMenu()">Quiénes Somos</a>
+      <a class="nav-link custom-link" [routerLink]="['/servicios']" routerLinkActive="active" (click)="closeMenu()">Afiliación y Servicios</a>
+      <a class="nav-link custom-link" [routerLink]="['/contactos']" routerLinkActive="active" (click)="closeMenu()">Contacto y Soporte</a>
+      <a class="nav-link custom-link" [routerLink]="['/documentacion']" routerLinkActive="active" (click)="closeMenu()">Documentación y Formatos</a>
     </div>
   </div>
 </nav>
 
-<!-- Contenido dinámico de Angular -->
 <router-outlet></router-outlet>
 
-<!-- Footer -->
 <footer class="py-5 mt-5 bg-black w-100">
   <div class="container">
     <div class="row text-center text-md-start">
-      <!-- Contacto -->
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold" style="color: #006400;">CONTACTO</h5>
         <p><strong>ATENCIÓN AL CLIENTE</strong></p>
@@ -35,7 +29,6 @@
         <p><strong>DIRECCIÓN</strong></p>
       </div>
 
-      <!-- Redes Sociales -->
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold" style="color: #006400;">REDES</h5>
         <div class="d-flex align-items-center mb-3">
@@ -52,7 +45,6 @@
         </div>
       </div>
 
-      <!-- Funciones -->
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold" style="color: #006400;">FUNCIONES</h5>
         <p><strong>SERVICIOS</strong></p>
