@@ -1,0 +1,96 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+    }
+
+    /* Navbar */
+    .navbar {
+        background-color: #000;
+        padding: 15px;
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Estilos para el botón del menú */
+    .navbar-toggler-icon {
+        background-color: #fff; /* Cambia el color del icono del toggle */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Coloca los links uno debajo del otro */
+        align-items: flex-start;
+        background-color: #333; /* Fondo oscuro para el menú */
+        position: absolute;
+        top: 100%; /* Posiciona el menú debajo del navbar */
+        left: 0;
+        width: 100%;
+        display: none; /* Inicia oculto */
+        z-index: 1050; /* Asegura que el menú esté por encima de otros elementos */
+        padding: 10px 0;
+        border-top: 2px solid #4CAF50; /* Añadimos una línea verde arriba */
+    }
+
+    /* Mostrar el menú cuando se active */
+    .navbar-nav.show {
+        display: block; /* Muestra el menú cuando se haga clic en el botón */
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        color: white; /* Hacemos el color de las letras blanco para que se vea bien */
+        font-weight: 600;
+        padding: 15px;
+        text-align: left;
+        width: 100%;
+        border-top: 1px solid #444; /* Da separación entre los links */
+    }
+
+    .nav-link:hover {
+        background-color: #006400; /* Hover con color de fondo */
+        color: white;
+    }
+
+    .nav-link.active {
+        background-color: #006400; /* Resalta el enlace activo */
+    }
+
+    /* Fondo para cuando el menú se despliega */
+    .navbar-nav {
+        background-color: #333; /* Color de fondo oscuro del menú */
+    }
+
+}
+
+/* Navbar para versiones desktop */
+.navbar-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    color: #4CAF50;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+}

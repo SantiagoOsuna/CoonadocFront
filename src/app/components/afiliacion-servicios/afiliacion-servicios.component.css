@@ -1,0 +1,80 @@
+/* ===== Afiliación y Servicios ===== */
+
+.titulo-afiliacion {
+    color: #006400;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitulo-afiliacion {
+    color: #6c757d; /* color gris tenue de bootstrap */
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Cards generales */
+  .card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    background-color: #343a40; /* dark bootstrap */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  
+  .card-body {
+    background-color: #ffffff;
+    padding: 1.5rem;
+  }
+  
+  /* Listas dentro de las tarjetas */
+  .card-body ul,
+  .card-body ol {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .card-body li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Imágenes dentro de las secciones */
+  .img-fluid.rounded {
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+  
+  /* Botones de descarga */
+  .btn-outline-dark {
+    border-color: #343a40;
+    color: #343a40;
+  }
+  
+  .btn-outline-dark:hover {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  
+  /* Lista de documentos */
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Responsive mejoras opcionales */
+  @media (max-width: 768px) {
+    .titulo-afiliacion {
+      font-size: 2rem;
+    }
+    
+    .subtitulo-afiliacion {
+      font-size: 1rem;
+    }
+  }
+  
