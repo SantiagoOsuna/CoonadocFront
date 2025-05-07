@@ -1,0 +1,43 @@
+<div class="container py-5">
+    <h1 class="text-center text-success mb-5">Noticias y Blog</h1>
+  
+    <!-- RF-5.1: Publicación de Noticias -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Publicar Noticia o Evento</h5>
+      </div>
+      <div class="card-body">
+        <textarea [(ngModel)]="noticia" class="form-control mb-3" rows="3" placeholder="Escribe aquí la noticia o evento..."></textarea>
+        <div class="text-end">
+          <button class="btn btn-success" (click)="publicarNoticia()">📢 Publicar</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- RF-5.2: Historias de Éxito -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Historias de Éxito de Afiliados</h5>
+      </div>
+      <div class="card-body">
+        <div *ngFor="let historia of historiasExito" class="alert alert-info d-flex align-items-center mb-2">
+          <i class="bi bi-star-fill me-2 text-warning"></i>
+          <span>{{ historia }}</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- RF-5.3: Suscripción -->
+    <div class="card shadow-sm">
+      <div class="card-header bg-dark text-white">
+        <h5 class="mb-0">Suscribirse al Boletín Informativo</h5>
+      </div>
+      <div class="card-body">
+        <div class="input-group">
+          <input type="email" [(ngModel)]="emailSuscripcion" class="form-control" placeholder="Tu correo electrónico">
+          <button class="btn btn-outline-light bg-success text-white" (click)="suscribirse()">📬 Suscribirse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

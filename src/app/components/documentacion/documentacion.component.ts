@@ -11,10 +11,15 @@ import { CommonModule } from '@angular/common';
 })
 export class DocumentacionComponent {
   pdfs = [
-    { title: 'Formato de Autorización', src: 'assets/pdf1.pdf' },
-    { title: 'Formato de Inscripción', src: 'assets/pdf2.pdf' },
-    { title: 'Formato de Solicitud', src: 'assets/pdf3.pdf' },
-    { title: 'Formato de Retiro', src: 'assets/pdf4.pdf' },
-    { title: 'Formato de Certificación', src: 'assets/pdf5.pdf' },
+    { title: 'Formato SED servicios', src: 'assets/SEDservicios.pdf' },
+    { title: 'Formato SED aportes', src: 'assets/SEDaportes.pdf' },
+    { title: 'Formato solicitud de crédito', src: 'assets/solicitudCredito.pdf' },
+    { title: 'Formato solicitud de asociación', src: 'assets/solicitudAsociacion.pdf' },
+    { title: 'Formato presentación familiares asociación', src: 'assets/familiaresAsociacion.pdf' },
   ];
+
+  selectedPdf = this.pdfs[0]; // PDF por defecto
+  selectPdf(pdf: any) {
+    this.selectedPdf = pdf;
+  }
 }

@@ -24,33 +24,33 @@
     <div class="row text-center text-md-start">
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold" style="color: #006400;">CONTACTO</h5>
-        <p><strong>ATENCIÓN AL CLIENTE</strong></p>
-        <p><strong>CORREOS</strong></p>
-        <p><strong>DIRECCIÓN</strong></p>
+        <p [routerLink]="['/contactos']" routerLinkActive="active" (click)="closeMenu()"><strong>ATENCIÓN AL CLIENTE</strong></p>
+        <p [routerLink]="['/contactos']" routerLinkActive="active" (click)="closeMenu()"><strong>CORREOS</strong></p>
+        <p [routerLink]="['/contactos']" routerLinkActive="active" (click)="closeMenu()"><strong>DIRECCIÓN</strong></p>
       </div>
 
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold" style="color: #006400;">REDES</h5>
         <div class="d-flex align-items-center mb-3">
           <img src="assets/whatsapp.svg" alt="WhatsApp" class="me-2" style="width: 30px; height: 30px;">
-          <strong>WHATSAPP</strong>
+          <a href="https://wa.me/573115019158" target="_blank" class="btn btn-outline-success"><strong>WHATSAPP</strong></a>
         </div>
         <div class="d-flex align-items-center mb-3">
           <img src="assets/instagram.png" alt="Instagram" class="me-2" style="width: 30px; height: 30px;">
-          <strong>INSTAGRAM</strong>
+          <a href="https://instagram.com/coonadoc" target="_blank" class="btn btn-outline-danger"><strong>INSTAGRAM</strong></a>
         </div>
         <div class="d-flex align-items-center mb-3">
           <img src="assets/facebook.png" alt="Facebook" class="me-2" style="width: 30px; height: 30px;">
-          <strong>FACEBOOK</strong>
+          <a href="https://facebook.com/coonadoc" target="_blank" class="btn btn-outline-primary"><strong>FACEBOOK</strong></a>
         </div>
       </div>
 
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold" style="color: #006400;">FUNCIONES</h5>
-        <p><strong>SERVICIOS</strong></p>
-        <p><strong>EN LÍNEA</strong></p>
-        <p><strong>CONTACTO</strong></p>
-        <p><strong>CLASIFICADOS</strong></p>
+        <h5 class="fw-bold" style="color: #006400;">NOSOTROS</h5>
+          <p [routerLink]="['/formatos']" routerLinkActive="active" (click)="closeMenu()"><strong>QUIÉNES SOMOS</strong></p>
+          <p [routerLink]="['/servicios']" routerLinkActive="active" (click)="closeMenu()"><strong>AFILIACIÓN Y SERVICIOS</strong></p>
+          <p [routerLink]="['/contactos']" routerLinkActive="active" (click)="closeMenu()"><strong>CONCTACTO Y SOPORTE</strong></p>
+          <p [routerLink]="['/documentacion']" routerLinkActive="active" (click)="closeMenu()"><strong>DOCUMENTACIÓN Y FORMATOS</strong></p>
       </div>
     </div>
   </div>
