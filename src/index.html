@@ -17,4 +17,25 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAafpiuSFAGu9K1eBU0LOFaKpYS_1AvEnM">
+  </script>
+  <script>
+  function initMap() {
+    const ubicacionCoonadoc = { lat: 4.710989, lng: -74.072092 }; // Coordenadas de ejemplo (Bogotá)
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 15,
+      center: ubicacionCoonadoc,
+    });
+
+    const marker = new google.maps.Marker({
+      position: ubicacionCoonadoc,
+      map: map,
+      title: "COONADOC",
+    });
+  }
+</script>
+
+
 </body>

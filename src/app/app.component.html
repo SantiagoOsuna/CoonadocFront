@@ -19,39 +19,61 @@
 
 <router-outlet></router-outlet>
 
-<footer class="py-5 mt-5 bg-black w-100">
-  <div class="container">
-    <div class="row text-center text-md-start">
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold" style="color: #006400;">CONTACTO</h5>
-        <p [routerLink]="['/contactos']" routerLinkActive="active" (click)="closeMenu()"><strong>ATENCIÓN AL CLIENTE</strong></p>
-        <p [routerLink]="['/contactos']" routerLinkActive="active" (click)="closeMenu()"><strong>CORREOS</strong></p>
-        <p [routerLink]="['/contactos']" routerLinkActive="active" (click)="closeMenu()"><strong>DIRECCIÓN</strong></p>
+<footer style="background-color: #5b8c5a; color: white;" class="pt-5 pb-3 mt-5">
+  <div class="container text-center">
+    <!-- Logo y redes -->
+    <img src="assets/COONADOCnegro.png" alt="Logo" class="mb-3" style="height: 60px;">
+    <div class="mb-3">
+      <a href="#" class="me-3 text-white"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
+
+    <!-- Secciones -->
+    <div class="row text-start text-white">
+      <!-- Información institucional -->
+      <div class="col-md-3 mb-3">
+        <h6 class="fw-bold">Quiénes Somos</h6>
+        <ul class="list-unstyled">
+          <li><a routerLink="/formatos" class="text-white text-decoration-none">Historia</a></li>
+          <li><a routerLink="/formatos" class="text-white text-decoration-none">Misión y Visión</a></li>
+          <li><a routerLink="/formatos" class="text-white text-decoration-none">Valores</a></li>
+        </ul>
       </div>
 
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold" style="color: #006400;">REDES</h5>
-        <div class="d-flex align-items-center mb-3">
-          <img src="assets/whatsapp.svg" alt="WhatsApp" class="me-2" style="width: 30px; height: 30px;">
-          <a href="https://wa.me/573115019158" target="_blank" class="btn btn-outline-success"><strong>WHATSAPP</strong></a>
-        </div>
-        <div class="d-flex align-items-center mb-3">
-          <img src="assets/instagram.png" alt="Instagram" class="me-2" style="width: 30px; height: 30px;">
-          <a href="https://instagram.com/coonadoc" target="_blank" class="btn btn-outline-danger"><strong>INSTAGRAM</strong></a>
-        </div>
-        <div class="d-flex align-items-center mb-3">
-          <img src="assets/facebook.png" alt="Facebook" class="me-2" style="width: 30px; height: 30px;">
-          <a href="https://facebook.com/coonadoc" target="_blank" class="btn btn-outline-primary"><strong>FACEBOOK</strong></a>
-        </div>
+      <!-- Servicios -->
+      <div class="col-md-3 mb-3">
+        <h6 class="fw-bold">Afiliación y Servicios</h6>
+        <ul class="list-unstyled">
+          <li><a routerLink="/servicios" class="text-white text-decoration-none">Requisitos de Afiliación</a></li>
+          <li><a routerLink="/servicios" class="text-white text-decoration-none">Tipos de Servicios</a></li>
+          <li><a routerLink="/servicios" class="text-white text-decoration-none">Beneficios</a></li>
+        </ul>
       </div>
 
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold" style="color: #006400;">NOSOTROS</h5>
-          <p [routerLink]="['/formatos']" routerLinkActive="active" (click)="closeMenu()"><strong>QUIÉNES SOMOS</strong></p>
-          <p [routerLink]="['/servicios']" routerLinkActive="active" (click)="closeMenu()"><strong>AFILIACIÓN Y SERVICIOS</strong></p>
-          <p [routerLink]="['/contactos']" routerLinkActive="active" (click)="closeMenu()"><strong>CONCTACTO Y SOPORTE</strong></p>
-          <p [routerLink]="['/documentacion']" routerLinkActive="active" (click)="closeMenu()"><strong>DOCUMENTACIÓN Y FORMATOS</strong></p>
+      <!-- Soporte y contacto -->
+      <div class="col-md-3 mb-3">
+        <h6 class="fw-bold">Contacto y Soporte</h6>
+        <ul class="list-unstyled">
+          <li><a routerLink="/contactos" class="text-white text-decoration-none">Contáctanos</a></li>
+          <li><a routerLink="/contactos" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
+          <li><a routerLink="/contactos" class="text-white text-decoration-none">Atención al Cliente</a></li>
+        </ul>
       </div>
+
+      <!-- Documentación -->
+      <div class="col-md-3 mb-3">
+        <h6 class="fw-bold">Documentación</h6>
+        <ul class="list-unstyled">
+          <li><a routerLink="/documentacion" class="text-white text-decoration-none">Formatos descargables</a></li>
+          <li><a routerLink="/documentacion" class="text-white text-decoration-none">Reglamentos</a></li>
+          <li><a routerLink="/documentacion" class="text-white text-decoration-none">Políticas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="mt-4 pt-3 border-top border-white">
+      <p class="mb-0 small">© 2024 COONADOC | Cooperativa Nacional de Docentes</p>
     </div>
   </div>
 </footer>
