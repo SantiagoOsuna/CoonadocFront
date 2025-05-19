@@ -109,3 +109,10 @@ footer {
     background-color: #000;
     color: #fff;
 }
+
+footer a img:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+

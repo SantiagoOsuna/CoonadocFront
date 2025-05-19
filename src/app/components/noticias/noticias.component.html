@@ -1,40 +1,153 @@
 <div class="container py-5">
-    <h1 class="text-center text-success mb-5">Noticias y Blog</h1>
-  
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header bg-success text-white">
-        <h5 class="mb-0">Publicar Noticia o Evento</h5>
-      </div>
-      <div class="card-body">
-        <textarea [(ngModel)]="noticia" class="form-control mb-3" rows="3" placeholder="Escribe aquí la noticia o evento..."></textarea>
-        <div class="text-end">
-          <button class="btn btn-success" (click)="publicarNoticia()">📢 Publicar</button>
-        </div>
-      </div>
-    </div>
-  
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header bg-primary text-white">
-        <h5 class="mb-0">Historias de Éxito de Afiliados</h5>
-      </div>
-      <div class="card-body">
-        <div *ngFor="let historia of historiasExito" class="alert alert-info d-flex align-items-center mb-2">
-          <i class="bi bi-star-fill me-2 text-warning"></i>
-          <span>{{ historia }}</span>
-        </div>
-      </div>
-    </div>
-  
-    <div class="card shadow-sm">
-      <div class="card-header bg-dark text-white">
-        <h5 class="mb-0">Suscribirse al Boletín Informativo</h5>
-      </div>
-      <div class="card-body">
-        <div class="input-group">
-          <input type="email" [(ngModel)]="emailSuscripcion" class="form-control" placeholder="Tu correo electrónico">
-          <button class="btn btn-outline-light bg-success text-white" (click)="suscribirse()">📬 Suscribirse</button>
+  <h1 class="text-center text-success mb-5">📰 Noticias y Blog</h1>
+
+  <!-- Botón para abrir el modal -->
+  <div class="d-flex justify-content-end mb-4">
+    <button class="btn btn-success shadow" data-bs-toggle="modal" data-bs-target="#modalCrearNoticia">
+      📢 Publicar Noticia o Evento
+    </button>
+  </div>
+
+  <!-- Noticias existentes -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let noticia of noticias">
+      <div
+        class="card h-100 shadow-sm border-0 card-hover"
+        (click)="abrirModal(noticia)"
+        style="cursor: pointer"
+      >
+        <img
+          [src]="noticia.imagen"
+          class="card-img-top"
+          alt="Imagen de noticia"
+          style="height: 200px; object-fit: cover"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ noticia.titulo }}</h5>
+          <p class="card-text text-muted">{{ noticia.descripcion }}</p>
         </div>
       </div>
     </div>
   </div>
-  
+
+  <!-- Modal de vista de noticia -->
+  <div class="modal fade" id="modalNoticia" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ noticiaSeleccionada?.titulo }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img
+            [src]="noticiaSeleccionada?.imagen"
+            class="img-fluid rounded mb-3 w-100"
+            style="max-height: 400px; object-fit: cover"
+          />
+          <p>{{ noticiaSeleccionada?.descripcion }}</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" (click)="leerArticulo()">Leer artículo completo</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de Historias de Éxito -->
+<div class="container py-5">
+  <h2 class="text-center text-success mb-5">🌟 Historias de Éxito</h2>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let historia of historiasExito">
+      <div class="card h-100 shadow-sm border-0">
+        <img
+          [src]="historia.imagen"
+          class="card-img-top"
+          alt="Imagen de historia de éxito"
+          style="height: 200px; object-fit: cover"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ historia.titulo }}</h5>
+          <p class="card-text text-muted">{{ historia.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sección de Suscripción -->
+<div class="container py-5">
+  <div class="bg-light rounded p-5 shadow">
+    <h2 class="text-center text-success mb-4">📬 Suscríbete al Canal de Noticias</h2>
+    <p class="text-center mb-4 text-muted">
+      Recibe las últimas noticias, eventos y novedades de nuestra cooperativa directamente en tu correo.
+    </p>
+    <form (ngSubmit)="suscribirse()" class="row justify-content-center">
+      <div class="col-md-6 col-sm-8 mb-3">
+        <input
+          type="email"
+          [(ngModel)]="emailSuscripcion"
+          name="emailSuscripcion"
+          class="form-control form-control-lg shadow-sm"
+          placeholder="Ingresa tu correo electrónico"
+          required
+        />
+      </div>
+      <div class="col-md-2 col-sm-4">
+        <button type="submit" class="btn btn-success btn-lg w-100 shadow">
+          Suscribirme
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  <!-- Modal de crear noticia -->
+  <div class="modal fade" id="modalCrearNoticia" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Crear Nueva Noticia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input
+              type="text"
+              [(ngModel)]="nuevaNoticia.titulo"
+              class="form-control"
+              placeholder="Título de la noticia"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">URL de la Imagen</label>
+            <input
+              type="text"
+              [(ngModel)]="nuevaNoticia.imagen"
+              class="form-control"
+              placeholder="https://..."
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Descripción</label>
+            <textarea
+              [(ngModel)]="nuevaNoticia.descripcion"
+              rows="4"
+              class="form-control"
+              placeholder="Descripción de la noticia..."
+            ></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" (click)="guardarNoticia()" data-bs-dismiss="modal">
+            Guardar
+          </button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,37 +1,94 @@
 <div class="container my-5 px-4">
 
+  <!-- Título principal -->
   <div class="text-center mb-5">
     <h2 class="fw-bold text-green">¿Quiénes Somos?</h2>
-    <p class="text-muted">Conoce la historia, misión, visión y documentación de COONADOC</p>
+    <p class="text-muted fs-5">Descubre nuestra historia, misión, visión y evolución como cooperativa solidaria</p>
   </div>
 
-  <div class="mb-5 text-center">
-    <img src="assets/historia.jpg" alt="Historia de COONADOC" class="img-fluid rounded shadow-lg mb-4" style="max-height: 400px; object-fit: cover;">
-    <p class="text-muted fs-5 mx-auto" style="max-width: 800px;">
-      Somos una cooperativa fundada por docentes con un modelo solidario orientado a mejorar la calidad de vida de sus asociados y sus familias a través de la prestación de servicios en un marco de confianza y satisfacción. Nuestros valores de eficiencia, confianza y calidez orientan todas las actuaciones de COONADOC gestionando los bienes comunes con máximo beneficio, una actitud prudente y relaciones humanas que promueven el bienestar y la solidaridad.
-    </p>
+  <!-- 1. Inspiración / Fundación -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <img src="assets/historia.jpg" alt="Fundación de COONADOC" class="img-fluid rounded shadow">
+    </div>
+    <div class="col-md-6">
+      <h4 class="fw-bold text-green mb-3">¿Por qué nació COONADOC?</h4>
+      <p class="text-muted fs-5">
+        COONADOC fue fundada por docentes convencidos de que la unión, la solidaridad y el compromiso social pueden transformar vidas. Nuestra inspiración nació del deseo de crear una red de apoyo mutuo que mejore la calidad de vida de los asociados y sus familias.
+      </p>
+    </div>
   </div>
 
+  <!-- 2. Historia + Rol del equipo fundador -->
   <div class="card shadow-sm border-0 mb-5">
     <div class="card-header bg-dark text-white">
       <h5 class="mb-0">Nuestra Historia</h5>
     </div>
     <div class="card-body">
       <p class="text-muted fs-5 mb-0">
-        COONADOC nació con el propósito de fortalecer los lazos entre colaboradores, promoviendo el bienestar y el crecimiento colectivo. A lo largo de los años, se ha consolidado como una cooperativa sólida y comprometida con sus valores.
+        Desde sus inicios, COONADOC ha estado guiada por un grupo de educadores con vocación social. A lo largo de los años, esta iniciativa se ha transformado en una cooperativa sólida que promueve el bienestar común, basándose en la transparencia, la confianza y el desarrollo humano.
       </p>
     </div>
   </div>
 
+<!-- 3. Evolución de la organización -->
+<div class="row align-items-center mb-5">
+  <!-- Carousel a la derecha en pantallas grandes -->
+  <div class="col-md-6 order-md-2">
+    <div id="carouselEvolucion" class="carousel slide shadow rounded" data-bs-ride="carousel">
+      <div class="carousel-inner rounded">
+        <div class="carousel-item active position-relative">
+          <img src="assets/evolucion1.jpg" class="d-block w-100" alt="Primeros años" style="height: 300px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Primeros Años</h5>
+            <p>El inicio de un sueño cooperativo basado en la solidaridad entre docentes.</p>
+          </div>
+        </div>
+        <div class="carousel-item position-relative">
+          <img src="assets/evolucion2.jpg" class="d-block w-100" alt="Expansión" style="height: 300px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Expansión de Servicios</h5>
+            <p>Ampliamos nuestros servicios para llegar a más asociados y sus familias.</p>
+          </div>
+        </div>
+        <div class="carousel-item position-relative">
+          <img src="assets/evolucion3.jpg" class="d-block w-100" alt="Modernización" style="height: 300px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Modernización</h5>
+            <p>COONADOC hoy: una cooperativa sólida, moderna y con visión al futuro.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvolucion" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselEvolucion" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Texto a la izquierda -->
+  <div class="col-md-6 order-md-1">
+    <h4 class="fw-bold text-green mb-3">Nuestro crecimiento</h4>
+    <p class="text-muted fs-5">
+      A lo largo de los años, hemos superado desafíos importantes, fortaleciendo nuestros servicios y ampliando nuestra base social. Hoy, COONADOC se proyecta como una organización moderna, con visión de futuro y una comunidad creciente de asociados comprometidos.
+    </p>
+  </div>
+</div>
+
+  <!-- 4. Misión y visión -->
   <div class="row g-4 mb-5">
     <div class="col-md-6">
       <div class="card shadow-sm border-0 h-100">
         <div class="card-header bg-dark text-white">
-          <h5 class="mb-0">Misión</h5>
+          <h5 class="mb-0">Nuestra Misión</h5>
         </div>
         <div class="card-body">
           <p class="text-muted">
-            COONADOC desarrolla el modelo solidario, orientada a satisfacer necesidades y expectativas a través de servicios y beneficios de calidad, contribuyendo a la calidad de vida de sus asociados y familias.
+            Desarrollar el modelo solidario, brindando servicios de calidad que respondan a las necesidades y expectativas de nuestros asociados y sus familias, fomentando el bienestar colectivo.
           </p>
           <img src="assets/mision.png" alt="Misión de COONADOC" class="img-fluid rounded mt-3">
         </div>
@@ -41,11 +98,11 @@
     <div class="col-md-6">
       <div class="card shadow-sm border-0 h-100">
         <div class="card-header bg-dark text-white">
-          <h5 class="mb-0">Visión</h5>
+          <h5 class="mb-0">Nuestra Visión</h5>
         </div>
         <div class="card-body">
           <p class="text-muted">
-            COONADOC para el año 2029 incrementará su base social en más de 1.000 asociados, a través de la gestión social, el empoderamiento de los valores corporativos de eficiencia, eficacia y calidez y la prestación de servicios generando transformación de vida, con las políticas del buen-vivir y el bien-estar, siguiendo los principios del cooperativismo.
+            En 2029, COONADOC proyecta contar con más de 1.000 asociados, ofreciendo servicios transformadores basados en los principios del cooperativismo y las políticas del buen vivir.
           </p>
           <img src="assets/vision.jpg" alt="Visión de COONADOC" class="img-fluid rounded mt-3">
         </div>
@@ -53,6 +110,7 @@
     </div>
   </div>
 
+  <!-- 5. Documentación Normativa -->
   <div class="card shadow-sm border-0">
     <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
       <h5 class="mb-0">Documentos Normativos</h5>
