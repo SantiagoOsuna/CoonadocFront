@@ -7,8 +7,24 @@
 
 <div class="mb-4">
   <h4 class="mb-3" style="color: #006400;">Formatos Institucionales</h4>
+
+  <!-- Primera fila: 3 botones -->
+  <div class="row g-3 mb-3">
+    <div class="col-md-4" *ngFor="let pdf of pdfs.slice(0, 3)">
+      <button
+        class="btn btn-light border w-100 shadow-sm d-flex align-items-center justify-content-between px-3 py-2"
+        (click)="selectPdf(pdf)"
+        [class.active]="selectedPdf.title === pdf.title"
+        style="transition: all 0.2s ease-in-out;">
+        <span class="fw-semibold text-start">{{ pdf.title }}</span>
+        <i class="bi bi-file-earmark-pdf fs-4 text-danger ms-2"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Segunda fila: 2 botones -->
   <div class="row g-3">
-    <div class="col-md-3" *ngFor="let pdf of pdfs">
+    <div class="col-md-6" *ngFor="let pdf of pdfs.slice(3, 5)">
       <button
         class="btn btn-light border w-100 shadow-sm d-flex align-items-center justify-content-between px-3 py-2"
         (click)="selectPdf(pdf)"
@@ -20,6 +36,7 @@
     </div>
   </div>
 </div>
+
 
   <div class="card shadow-sm border-0 mb-5" *ngIf="selectedPdf">
     <div class="card-header bg-white text-dark text-center fw-bold">
@@ -72,7 +89,7 @@
         </li>
 
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span>Formato SED aportes</span>
+          <span>Formato SED aportes</span>  
           <div>
             <a class="btn btn-outline-primary btn-sm me-2" href="assets/SEDaportes.pdf" download>Descargar PDF</a>
             <a class="btn btn-outline-success btn-sm" href="assets/pdf4.docx" download>Descargar Word</a>

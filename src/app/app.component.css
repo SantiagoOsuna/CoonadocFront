@@ -7,75 +7,12 @@ body {
     height: auto;
 }
 
-@media (max-width: 768px) {
-    .logo {
-        width: 120px;
-    }
-
-    .navbar {
-        background-color: #000;
-        padding: 15px;
-        position: relative;
-        z-index: 10;
-    }
-
-    .navbar-toggler-icon {
-        background-color: #fff;
-    }
-
-    .navbar-nav {
-        flex-direction: column; 
-        align-items: flex-start;
-        background-color: #333; 
-        position: absolute;
-        top: 100%; 
-        left: 0;
-        width: 100%;
-        display: none; 
-        z-index: 1050; 
-        padding: 10px 0;
-        border-top: 2px solid #4CAF50; 
-    }
-
-    .navbar-nav.show {
-        display: block; 
-    }
-
-    .nav-link {
-        font-size: 1.2rem;
-        color: white; 
-        font-weight: 600;
-        padding: 15px;
-        text-align: left;
-        width: 100%;
-        border-top: 1px solid #444;
-        transition: background-color 0.3s, transform 0.3s, color 0.3s;
-    }
-
-    .nav-link:hover {
-        background-color: #006400;
-        color: white;
-        transform: scale(1.05);
-    }
-
-    .nav {
-        font-size: 1.2rem;
-        color: white; 
-        font-weight: 600;
-        padding: 15px;
-        text-align: left;
-        width: 100%;
-        border-top: 1px solid #444;
-        transition: background-color 0.3s, transform 0.3s, color 0.3s;
-    }
-
-    .nav-link.active {
-        background-color: #006400; 
-    }
-
-    .navbar-nav {
-        background-color: #333;
-    }
+/* Header navbar */
+.navbar {
+    background-color: #000 !important;
+    padding: 15px;
+    position: relative;
+    z-index: 10;
 }
 
 .navbar-nav {
@@ -83,36 +20,108 @@ body {
     gap: 2rem;
     align-items: center;
     list-style: none;
+    background-color: transparent;
 }
 
-.nav-link {
+.navbar-nav .nav-link {
     font-size: 1.3rem;
-    color: #4CAF50;
+    color: #1a9643 !important;  /* Verde */
     font-weight: 600;
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     padding: 10px;
     border-radius: 5px;
 }
 
-.nav-link:hover {
-    color: white;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #f58021 !important;  /* Naranja */
     transform: scale(1.05); 
     text-decoration: none;
 }
 
+/* Botón hamburguesa */
 .navbar-toggler {
     border: none;
     background: none;
 }
 
+.navbar-toggler-icon {
+    background-image: none;
+    width: 25px;
+    height: 3px;
+    background-color: #2a9d8f;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #2a9d8f;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon,
+.navbar-toggler:hover .navbar-toggler-icon::before,
+.navbar-toggler:hover .navbar-toggler-icon::after,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    background-color: #f4a261;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        z-index: 1050;
+        padding: 10px 0;
+        border-top: 2px solid #2a9d8f;
+    }
+
+    .navbar-nav.show {
+        display: block;
+    }
+
+    .navbar-nav .nav-link {
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid #444;
+        font-size: 1.2rem;
+    }
+}
+
+/* Footer */
 footer {
     background-color: #000;
     color: #fff;
 }
 
 footer a img:hover {
-  opacity: 0.75;
-  transform: scale(1.1);
-  transition: all 0.2s ease;
+    opacity: 0.75;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
 }
-

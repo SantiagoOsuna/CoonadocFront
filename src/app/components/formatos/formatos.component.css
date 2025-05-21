@@ -11,3 +11,28 @@
   max-height: 200px;
   object-fit: cover;
 }
+
+.text-green {
+  color: #1b5e20;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+.bg-light-section {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.card-body img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.btn-sm i {
+  margin-right: 5px;
+}
